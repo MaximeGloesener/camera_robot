@@ -45,7 +45,6 @@ def main():
 
         # Load YOLOv8 model
         model = YOLO("yolov8n.pt")  # You can replace with your custom weights
-        iou_threshold = 0.45
 
         print("Camera streaming started. Press 'q' to quit.")
 
@@ -56,7 +55,7 @@ def main():
                 continue
 
             # Run YOLOv8 inference on the frame
-            results = model(image_np, conf=0.15, iou=iou_threshold, verbose=False)
+            results = model(image_np, verbose=False)
 
             # Get the annotated frame
             annotated_frame = results[0].plot()
