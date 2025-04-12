@@ -37,7 +37,7 @@ def get_frame(cam, gamma_lut, contrast_lut, color_correction):
 
 
 def main():
-    print("\n--- GX Camera + YOLOv8 Inference ---\n")
+    print("\n--- GX Camera + YOLO Inference ---\n")
 
     try:
         cam, gamma_lut, contrast_lut, color_correction = initialize_camera()
